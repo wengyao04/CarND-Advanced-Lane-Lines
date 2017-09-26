@@ -11,7 +11,7 @@ Pass gray scaled image to the cv2.Sobel() taht takes the derivative of the image
 
 | absolute sobel  | magnitude of sobel | direction of sobel | combined color threshold |
 |:----------------:|:------------------:|:------------------:|:------------------:|
-| absolute sobel_x |  sqrt(sobel_x * sobel_x + sobel_y * sobel_y) | arctan(sobel_y/sobel_x) | S-channel of HLS and absolute sobel_x |
+| absolute sobel_x |  sqrt(sobel_x^2 + sobel_y^2) | arctan(sobel_y/sobel_x) | S-channel of HLS and absolute sobel_x |
 
 <img src="./output_images/test_images_threshold.jpg" width="800"/>
 
