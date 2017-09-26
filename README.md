@@ -59,5 +59,4 @@ class Lines():
 
 <img src="./output_images/test_images_fit_region.jpg" width="800"/>
 
-### Project Output
-[Project Output](https://github.com/wengyao04/CarND-Advanced-Lane-Lines/tree/master/project_video_output.mp4)
+### Disccussion
