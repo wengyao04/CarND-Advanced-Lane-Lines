@@ -36,7 +36,26 @@ Two peaks in the histogram indicate the x-position of the base of the lane lines
 
 <img src="./output_images/test_images_fit.jpg" width="850"/>
 
-#### Apply Pipeline on Test Images
+### Apply Pipeline on Test Images
+Define a class of Lines that keep x values and fitting parameters of last 5 fits. The best fitting parameters is the average of five saved fits. If best fitting exists, I skip sliding windows and search in a margin around the line positions which are calculated using best fitting parameters. In the sanity check, if the relative change of curvatures between previous and current lines is greater than 0.5, I reset data of Lines and will find line by sliding window procedure in the next image.
+```
+class Lines():
+    def reset(self):
+        # x values of the last n fits of the line n = 5
+        self.recent_xfitted = []
+        self.recent_fits = []
+        #average x values of the fitted line over the last n iterations
+        self.bestx = np.array([])
+        #polynomial coefficients averaged over the last n iterations
+        self.best_fit = np.array([])
+        #radius of curvature of the line in some units
+        self.radius_of_curvature = None
+    
+    def __init__(self, maxKeep=5):
+        self.reset()
+        self.maxKeep = maxKeep
+```
+
 
 <img src="./output_images/test_images_fit_region.jpg" width="800"/>
 
