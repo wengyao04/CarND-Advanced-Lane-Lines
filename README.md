@@ -7,11 +7,11 @@ Apply `cv2.findChessboardCorners()` on [chessboard images](https://github.com/we
 <img src="./output_images/calibrate_chess.jpg" width="600"/>
 
 ### Gradient Threshold
-Pass gray scaled image to the cv2.Sobel() taht takes the derivative of the image in x or y direction. Taking the gradient in the x direction emphasizes edges closer to vertical. Alternatively, taking the gradient in the y direction emphasizes edges closer to horizontal. I try different thresholds to detect the lane lines
+Pass gray scaled image to the cv2.Sobel() taht takes the derivative of the image in x or y direction. Taking the gradient in the x direction emphasizes edges closer to vertical. Alternatively, taking the gradient in the y direction emphasizes edges closer to horizontal. I try different thresholds to detect the lane lines, the combination of threshold on S channel (HLS) and threshold of applying Sobel operator in x direction gives a better performace.
 
 | absolute sobel  | magnitude of sobel | direction of sobel | combined color threshold |
 |:----------------:|:------------------:|:------------------:|:------------------:|
-| absolute sobel_x |  sqrt(sobel_x*sobel_x + sobel_y*sobel_y) | arctan(sobel_y/sobel_x) | s-channel of HLS and absolute sobel_x |
+| absolute sobel_x |  sqrt(sobel_x * sobel_x + sobel_y * sobel_y) | arctan(sobel_y/sobel_x) | S-channel of HLS and absolute sobel_x |
 
 <img src="./output_images/test_images_threshold.jpg" width="800"/>
 
