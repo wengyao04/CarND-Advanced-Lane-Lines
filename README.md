@@ -18,8 +18,10 @@ Pass gray scaled image to the cv2.Sobel() taht takes the derivative of the image
 ### Perspective Transform
 <img src="./output_images/test_images_warp.jpg" width="850"/>
 
+#### Find the Lane Lines by Polynomial Fits
 <img src="./output_images/test_images_fit.jpg" width="850"/>
 
+#### Apply Pipeline on Test Images
 <img src="./output_images/test_images_fit_region.jpg" width="800"/>
 
 
