@@ -37,5 +37,6 @@ Two peaks in the histogram indicate the x-position of the base of the lane lines
 <img src="./output_images/test_images_fit.jpg" width="850"/>
 
 #### Apply Pipeline on Test Images
+
 <img src="./output_images/test_images_fit_region.jpg" width="800"/>
 
