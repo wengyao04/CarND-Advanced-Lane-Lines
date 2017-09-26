@@ -60,4 +60,4 @@ class Lines():
 <img src="./output_images/test_images_fit_region.jpg" width="800"/>
 
 ### Discussion
-My pipeline works well on the project veido but fails on the challenge viedos as I use abosulte pixels in the perspective transform. 
+My pipeline works well on the project video but fails on the challenge viedos as I use abosulte pixels in the perspective transform, it is better to find percentage of image width and height to dertermin source and destination. 
