@@ -26,7 +26,13 @@ destination = np.float32([[200, 0], [1080, 0], [1080, 720], [200, 720]])
 
 <img src="./output_images/test_images_warp.jpg" width="850"/>
 
-#### Find the Lane Lines by Polynomial Fits
+### Find the Lane Lines by Polynomial Fits
+After applying calibration, a combined threshold and a perspective transform on a road image, take a histogram along all the columns in the lower half of the image like this:
+```
+import numpy as np
+histogram = np.sum(img[img.shape[0]//2:,:], axis=0)
+```
+
 <img src="./output_images/test_images_fit.jpg" width="850"/>
 
 #### Apply Pipeline on Test Images
