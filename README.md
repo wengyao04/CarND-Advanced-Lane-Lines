@@ -4,6 +4,8 @@
 ### Project Video
 <img src="project_output.gif" width="650"/>
 
+--------------------------------------------------------------------------------
+
 ### Calibrate Camera
 Apply `cv2.findChessboardCorners()` on [chessboard images](https://github.com/wengyao04/CarND-Advanced-Lane-Lines/tree/master/camera_cal) to identify corners as `imgpoints`, and save the corners of a horizontal chessbaord (size=9x5) in a 3D array `objpoints`.  `cv2.calibrateCamera()` is used to calculate the distortion coefficients and calibration matrix. The following images show the chessboard without/with calibration.
 
@@ -60,4 +62,4 @@ class Lines():
 <img src="./output_images/test_images_fit_region.jpg" width="800"/>
 
 ### Project Output
--[Project Video](#pipeline-video)
+[Project Video](#pipeline-video)
